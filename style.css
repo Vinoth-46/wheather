@@ -1,64 +1,101 @@
-body {
+body, html {
   margin: 0;
-  font-family: 'Helvetica Neue', sans-serif;
-  background: linear-gradient(135deg, #89f7fe, #66a6ff);
+  padding: 0;
+  height: 100%;
+  font-family: "Poppins", sans-serif;
   color: #fff;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background: #000;
+  overflow: hidden;
+}
+
+#weather-canvas {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  background: rgba(0,0,0,0.4);
-  padding: 30px;
-  border-radius: 20px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-  width: 95%;
-  max-width: 600px;
-  text-align: center;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  padding: 30px 20px;
+  box-sizing: border-box;
+  gap: 20px;
+}
+
+.search-bar {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.search-bar input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.search-bar button {
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: none;
+  background-color: #00bcd4;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.search-bar button:hover {
+  background-color: #0192a0;
 }
 
 .weather-card, .spotify-card {
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 15px;
-  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 20px;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
 }
 
-input[type="text"] {
-  padding: 10px;
-  border: none;
-  border-radius: 10px;
-  width: 60%;
+.weather-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-top: 10px;
+}
+
+.weather-info img {
+  width: 80px;
+  height: 80px;
+}
+
+.temp-condition {
+  margin-left: 16px;
+}
+
+#details p {
+  margin: 5px 0;
   font-size: 16px;
 }
 
-button {
-  margin-left: 10px;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 10px;
-  background: #00c6ff;
-  color: #fff;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-button:hover {
-  background: #0072ff;
-}
-
-#weatherInfo img {
-  width: 80px;
-  margin-top: 10px;
-}
-
-h1, h2 {
-  margin: 10px 0;
+.spotify-card iframe {
+  border-radius: 12px;
 }
