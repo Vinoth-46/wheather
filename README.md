@@ -26,11 +26,12 @@ This project is a modern, elegant weather dashboard that automatically detects y
 - Add animations and transitions to the embedded Spotify player.
 
 ## 📸 Screenshots
-![image](https://github.com/user-attachments/assets/252ddded-4fc5-4f3f-ada5-62c7194d71e1)
+![image](https://github.com/user-attachments/assets/ccdb85a4-60c0-45f3-acb4-48da95407a7b)
+
 
 
 ## 🔗 Live Demo
-*(Optional: Add link if you deploy your app online)*
+[*(Optional: Add link if you deploy your app online)*](https://vinoth-46.github.io/wheather/)
 
 ## 📜 License
 This project is open source 
