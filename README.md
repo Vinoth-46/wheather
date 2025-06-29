@@ -31,7 +31,7 @@ This project is a modern, elegant weather dashboard that automatically detects y
 
 
 ## 🔗 Live Demo
-[*(Optional: Add link if you deploy your app online)*](https://vinoth-46.github.io/wheather/)
+[*( Weather Dashboard with Dynamic Spotify Integration)*](https://vinoth-46.github.io/wheather/)
 
 ## 📜 License
 This project is open source 
