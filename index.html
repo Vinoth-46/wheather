@@ -1,29 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Weather + Music Dashboard</title>
+  <title>Weather Dashboard with Spotify</title>
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
+  <canvas id="weather-canvas"></canvas>
+
   <div class="container">
-    <div class="card">
-      <h2 id="cityName">Your City</h2>
-      <img id="icon" alt="Weather Icon" />
-      <h3 id="temperature"></h3>
-      <p id="condition"></p>
+    <div class="search-bar">
+      <input type="text" id="cityInput" placeholder="Search city..."/>
+      <button onclick="getWeatherBySearch()">Search</button>
+    </div>
+
+    <div class="weather-card">
+      <h1 id="cityName">Loading...</h1>
+      <div class="weather-info">
+        <img id="icon" alt="Icon"/>
+        <div class="temp-condition">
+          <h2 id="temperature"></h2>
+          <p id="condition"></p>
+        </div>
+      </div>
       <div id="details"></div>
     </div>
 
-    <div class="card">
-      <h2>Weather Playlist</h2>
-      <iframe id="spotifyEmbed" style="border-radius:12px" src="" width="100%" height="380" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" loading="lazy"></iframe>
-    </div>
-
-    <div class="search-bar">
-      <input type="text" id="cityInput" placeholder="Enter city..." />
-      <button onclick="getWeather()">Search</button>
+    <div class="spotify-card">
+      <iframe id="spotify" width="100%" height="380" frameborder="0"
+        allowtransparency="true" allow="encrypted-media"></iframe>
     </div>
   </div>
 
